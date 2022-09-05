@@ -18,13 +18,7 @@ export default {
   },
   methods: {
     registerUser(user) {
-      user.registered = true;
-      const date = new Date();
-      this.$store.state.registrations.push({
-        userId: user.id,
-        name: user.name,
-        date: date.getMonth() + "/" + date.getDay(),
-      });
+      this.$store.commit('register', user.id);
     },
   },
 };
