@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     registerUser(user) {
-      this.$store.commit('register', user.id);
+      this.$store.dispatch('register', user.id);
     },
   },
 };

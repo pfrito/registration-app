@@ -52,6 +52,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    register(context, userId) {
+      setTimeout(() => {
+        context.commit('register', userId);
+      } ,1000);
+    }
   },
   modules: {
   }
